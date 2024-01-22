@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<style>
+			#div1 {
+				background-color: white;
+				width: 48.2%;
+				float:left;
+			}
+			#div2 {
+				background-color: white;
+				width: 48.2%;
+				float:right;
+			}
+			 #div3 {
+				background-color: white;
+				width: 100%;
+				float:bottom;
+			}
+		</style>
 		<meta charset="UTF-8">
-        <title>Messenger</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Messenger</title>
 	</head>
 	<body>
-		<!--	WEBSITE BODY	-->
+		<fieldset id="div1">
+			<legend>Send Message</legend>
+			<label for="musername">User:</label>
+			<input type="text" id="musername" name="username" required><br>
+			<br>
+			<label for="message">Message:</label>
+			<input type="text" id="message" name="message" required><br>
+			<br>
+			<input type="submit" value="Send">
+		</fieldset>
+		<fieldset id = "div2">
+			<legend>Register User</legend>
+			<label for="rusername">Username:</label>
+			<input type="text" id="rusername" name="username" required><br>
+			<br>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required><br>
+			<br>
+			<input type="submit" value="Register">
+		</fieldset>
+		<form action="" method="post">
+			<fieldset id="div3">
+				<legend>Inbox</legend>
+				<form action="" method="post">
+					<label for="sender">Username:</label><br>
+
+					<input type="text" id="sender" name="sender" required><br>
+					<br>
+					<label for="recipient">password:</label><br>
+					<input type="text" id="recipient" name="recipient" required> <br>
+					<br><input type="submit" value="Check Inbox">
+					<br>
+				</form>
+			</fieldset>
+		</form>
 	</body>
 </html>

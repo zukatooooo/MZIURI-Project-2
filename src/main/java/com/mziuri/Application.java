@@ -10,9 +10,9 @@ import org.apache.catalina.webresources.StandardRoot;
 import java.io.File;
 
 public class Application {
-
     public static void main(String[] args) throws LifecycleException {
-
+        Jdbc jdbc = new Jdbc();
+        jdbc.createDatabase("root", "paroli");
         Tomcat tomcat = new Tomcat();
 
         tomcat.enableNaming();

@@ -11,6 +11,30 @@
 //     var div = document.getElementById("some-div-id");
 //     div.innerHTML = 'some html code here';
 // }
+document.getElementById("sendButton").addEventListener("click", function() {
+  var user = document.getElementById("musername").value;
+  var message = document.getElementById("message").value;
+
+  var data = {
+    user: user,
+    message: message
+  };
+
+  fetch('/message', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+});
 
 
 
